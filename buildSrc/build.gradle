@@ -1,0 +1,11 @@
+repositories {
+    jcenter()
+    maven { url "https://plugins.gradle.org/m2/" }
+}
+
+dependencies {
+    api("com.netflix.nebula:nebula-publishing-plugin:17.3.0")
+    api("com.netflix.nebula:nebula-release-plugin:15.0.3")
+    compile localGroovy()
+    compileOnly gradleApi()
+}
