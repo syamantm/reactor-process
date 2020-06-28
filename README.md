@@ -11,11 +11,15 @@ A java library to run a `java.lang.Process` with a reactive approach. It allows 
 * Maven - [See official github instructions](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-apache-maven-for-use-with-github-packages)
 * Gradle - [See official github instructions](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-gradle-for-use-with-github-packages)
 
+## Available versions
+
+See [GitHub Packages repository](https://github.com/syamantm/reactor-process/packages) for available versions.
+
 ### Gradle dependency
 ```groovy
 api("io.github.syamantm:reactor-process:$version")
 ```
-* `$version` - See latest release version
+
 ### Maven dependency
 ```xml
 <dependency>
@@ -24,8 +28,6 @@ api("io.github.syamantm:reactor-process:$version")
   <version>$version</version>
 </dependency>
 ```
-
-* `$version` - See latest release version
 
 ## Usage
 
