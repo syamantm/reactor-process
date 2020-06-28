@@ -1,6 +1,7 @@
 # reactor-process
 
 ![Java CI](https://github.com/syamantm/reactor-process/workflows/CI%20Build/badge.svg?branch=master)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/syamantm/reactor-process)
 
 A java library to run a `java.lang.Process` with a reactive approach. It allows output of the process to be consumed as a reactive stream, instead of blocking and waiting for the process to finish. 
 
@@ -12,16 +13,19 @@ A java library to run a `java.lang.Process` with a reactive approach. It allows 
 
 ### Gradle dependency
 ```groovy
-api("io.github.syamantm:reactor-process:0.0.1-SNAPSHOT")
+api("io.github.syamantm:reactor-process:$version")
 ```
+* `$version` - See latest release version
 ### Maven dependency
 ```xml
 <dependency>
   <groupId>io.github.syamantm</groupId>
   <artifactId>reactor-process</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>$version</version>
 </dependency>
 ```
+
+* `$version` - See latest release version
 
 ## Usage
 
