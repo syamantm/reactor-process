@@ -1,6 +1,8 @@
 package io.github.syamantm.reactor.process.internal;
 
 import io.github.syamantm.reactor.process.ProcessException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -10,12 +12,9 @@ import org.reactivestreams.Subscription;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
 /**
- * An implementation of org.reactivestreams.Publisher that publishes
- * the output stream of a java.lang.Process
+ * An implementation of org.reactivestreams.Publisher that publishes the output stream of a
+ * java.lang.Process
  */
 public class ProcessPublisher implements Publisher<String> {
 
@@ -82,14 +81,12 @@ public class ProcessPublisher implements Publisher<String> {
   }
 
   /**
-   * A function to handle process termination. This can't be done simply on
-   * Process.onExit() as the process output may not be fully consumed yet by the subscriber.
-   * It waits for a latch which acts as signals to indicates :
-   *     1. the processing on the process stream has finished
-   *     2. the Process.onExit event has happened.
-   * Once, both the signals are received, this class indicates the terminal state
-   * to the subscriber by either calling subscriber.onComplete() or subscriber.onError()
-   * based on Process.exitValue()
+   * A function to handle process termination. This can't be done simply on Process.onExit() as the
+   * process output may not be fully consumed yet by the subscriber. It waits for a latch which acts
+   * as signals to indicates : 1. the processing on the process stream has finished 2. the
+   * Process.onExit event has happened. Once, both the signals are received, this class indicates
+   * the terminal state to the subscriber by either calling subscriber.onComplete() or
+   * subscriber.onError() based on Process.exitValue()
    */
 
   private void handleTermination(Subscriber<? super String> subscriber) {
