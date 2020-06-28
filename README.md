@@ -2,16 +2,19 @@
 
 ![Java CI](https://github.com/syamantm/reactor-process/workflows/CI%20Build/badge.svg?branch=master)
 
-## Code Style
-[Follow google styleguide](https://github.com/google/styleguide)
+A java library to run a `java.lang.Process` with a reactive approach. It allows output of the process to be consumed as a reactive stream, instead of blocking and waiting for the process to finish. 
 
 ## Add dependency
 
-### Gradle
+### Configure GitHub packages repository
+* Maven - [See official github instructions](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-apache-maven-for-use-with-github-packages)
+* Gradle - [See official github instructions](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-gradle-for-use-with-github-packages)
+
+### Gradle dependency
 ```groovy
 api("io.github.syamantm:reactor-process:0.0.1-SNAPSHOT")
 ```
-### Maven
+### Maven dependency
 ```xml
 <dependency>
   <groupId>io.github.syamantm</groupId>
