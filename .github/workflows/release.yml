@@ -15,4 +15,4 @@ jobs:
         with:
           java-version: 11
       - name: Publish Snapshot
-        run: ./gradlew -Prelease.useLastTag=true final publish -Pgpr.key=${{ secrets.GITHUB_TOKEN }} -Pgpr.user=${{ github.actor }}
+        run: ./gradlew -Prelease.useLastTag=true -Pbintray.user=${{ secrets.BINTRAY_USER }} -Pbintray.key=${{ secrets.BINTRAY_KEY }} final

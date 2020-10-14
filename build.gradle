@@ -2,7 +2,7 @@ plugins {
 	id 'java-library'
 }
 
-apply plugin: GitHubPublishing
+apply plugin: BintrayPublishing
 
 allprojects {
 	apply plugin: "nebula.release"
