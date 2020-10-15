@@ -17,4 +17,4 @@ jobs:
         with:
           java-version: 11
       - name: Publish Snapshot
-        run: ./gradlew clean -Pbintray.user=${{ secrets.BINTRAY_USER }} -Pbintray.key=${{ secrets.BINTRAY_KEY }} snapshot
+        run: ./gradlew clean -Pbintray.user=${{ secrets.BINTRAY_USER }} -Pbintray.key=${{ secrets.BINTRAY_KEY }} -Pbintray.repo=snapshots snapshot

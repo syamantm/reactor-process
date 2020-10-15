@@ -15,4 +15,4 @@ jobs:
         with:
           java-version: 11
       - name: Publish Snapshot
-        run: ./gradlew -Prelease.useLastTag=true -Pbintray.user=${{ secrets.BINTRAY_USER }} -Pbintray.key=${{ secrets.BINTRAY_KEY }} final
+        run: ./gradlew -Prelease.useLastTag=true -Pbintray.user=${{ secrets.BINTRAY_USER }} -Pbintray.key=${{ secrets.BINTRAY_KEY }} -Pbintray.repo=maven final
